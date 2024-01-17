@@ -17,8 +17,9 @@
     </kendo-drawer>
 
     <kendo-drawer-content>
-      <router-outlet></router-outlet>
-      <!-- <app-kendo-table [selectedItem]="selected"></app-kendo-table> -->
+      <!-- <router-outlet></router-outlet> -->
+      <app-kendo-table *ngIf="selected === 'Table'"></app-kendo-table>
+      <app-kendo-grid *ngIf="selected === 'Grid'"></app-kendo-grid>
     </kendo-drawer-content>
   </kendo-drawer-container>
 </section>

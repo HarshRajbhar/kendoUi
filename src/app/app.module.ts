@@ -9,9 +9,10 @@ import { KendoTableComponent } from './kendo-table/kendo-table.component';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { InputsModule } from '@progress/kendo-angular-inputs';
+import { KendoGridComponent } from './kendo-grid/kendo-grid.component';
 
 @NgModule({
-  declarations: [AppComponent, KendoTableComponent],
+  declarations: [AppComponent, KendoTableComponent, KendoGridComponent],
   imports: [
     LayoutModule,
     ButtonsModule,  
