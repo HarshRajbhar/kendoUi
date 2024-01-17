@@ -1,0 +1,10 @@
+<div>
+  <h1 class="text-center my-4 w-full">Table Data</h1>
+  <kendo-grid [data]="gridData" [height]="560">
+    <kendo-grid-column field="ProductID" title="ID"> </kendo-grid-column>
+    <kendo-grid-column field="ProductName" title="Name"> </kendo-grid-column>
+    <kendo-grid-column field="Category.CategoryName" title="Category">
+    </kendo-grid-column>
+    <kendo-grid-column field="UnitPrice" title="Price"> </kendo-grid-column>
+  </kendo-grid>
+</div>

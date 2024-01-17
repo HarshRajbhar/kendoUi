@@ -1,0 +1,104 @@
+<div>
+  <h1 class="text-center !text-[20px] my-4 w-full">Kendo All Type of Inputs</h1>
+  <hr />
+</div>
+
+<section class="section">
+  <!-- Checkbox -->
+  <p class="mb">1) Check-box</p>
+  <form class="k-form mb" [formGroup]="form">
+    <kendo-formfield showHints="initial" class="mb">
+      <div class="k-form-field-checkbox-wrap flex w-full">
+        <input
+          kendoCheckBox
+          id="terms"
+          type="checkbox"
+          formControlName="terms"
+        />
+        <kendo-label
+          class="k-checkbox-label"
+          for="terms"
+          text="I agree with Terms&Conditions"
+        ></kendo-label>
+      </div>
+      <kendo-formhint
+        >By checking this, you agree to our Terms&Conditions</kendo-formhint
+      >
+      <kendo-formerror>Error: This field is required</kendo-formerror>
+    </kendo-formfield>
+  </form>
+
+  <!-- Number Input -->
+  <div class="input-box">
+    <p class="mb">2) Type Number Input</p>
+    <kendo-formfield showHints="always">
+      <kendo-label text="Enter Number">
+        <kendo-numerictextbox
+          format="#.00 kg"
+          [step]="1"
+          [min]="0.5"
+          [max]="100"
+          [value]="10"
+        ></kendo-numerictextbox>
+      </kendo-label>
+    </kendo-formfield>
+  </div>
+
+  <!-- range input -->
+  <div class="input-box">
+    <p class="mb">4) Range input</p>
+    <div class="example-config">
+      Selected Range:
+      <strong> {{ range_value[0] }} - {{ range_value[1] }}</strong>
+    </div>
+    <kendo-label class="k-form" text="Choose a Price Range">
+      <kendo-rangeslider
+        [(ngModel)]="range_value"
+        [min]="min"
+        [max]="max"
+        [smallStep]="smallStep"
+        [largeStep]="largeStep"
+      ></kendo-rangeslider>
+    </kendo-label>
+  </div>
+
+  <!-- Switches -->
+  <div class="input-box">
+    <p class="mb">5) Switch input</p>
+    <kendo-label text="Labels">
+      <kendo-switch
+        [(ngModel)]="switch_check"
+        onLabel="Yes"
+        offLabel="No"
+      ></kendo-switch>
+    </kendo-label>
+  </div>
+
+  <!-- Text area -->
+  <div class="input-box">
+    <p class="mb">6) Textarea input</p>
+    <div class="example-config pb">
+      <kendo-label text="Enter your name" class="name-label">
+        <!-- &nbsp; -->
+        <!-- [style.width.px]="180" -->
+        <kendo-textarea
+          placeholder="Enter your name"
+          class="mt"
+          [size]="textarea_size"
+          [rounded]="textarea_rounded"
+          [fillMode]="textarea_fillMode"
+        >
+        </kendo-textarea>
+      </kendo-label>
+    </div>
+  </div>
+  <!-- Text area -->
+  <div class="input-box">
+    <p class="mb">6) Textarea input</p>
+    <div class="example-config pb">
+      <kendo-label text="Name">
+        <kendo-textbox placeholder="John Smith"></kendo-textbox>
+      </kendo-label>
+    </div>
+  </div>
+</section>
