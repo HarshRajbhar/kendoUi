@@ -1,4 +1,24 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { sampleProducts } from 'src/assets/tableData';
+
+interface ColumnSetting {
+  field: string;
+  title: string;
+  format?: string;
+  type: 'text' | 'numeric' | 'boolean' | 'date';
+  width?: any;
+}
+interface Product {
+  ProductID: number;
+  ProductName: string;
+  Discontinued?: boolean;
+  UnitsInStock?: number;
+  UnitPrice: number;
+  Category: {
+    CategoryID: number;
+    CategoryName: string;
+  };
+}
 
 @Component({
   selector: 'app-kendo-table',
@@ -6,5 +26,5 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./kendo-table.component.scss'],
 })
 export class KendoTableComponent {
-  @Input() selectedItem!: string;
+  gridData: Product[] = sampleProducts;
 }

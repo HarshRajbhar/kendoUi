@@ -29,6 +29,8 @@ export class AppComponent {
     this.selected = ev.item.text;
     if (ev.item.text === 'Table') {
       this.router.navigate(['/table']);
+    } else {
+      this.router.navigate(['']);
     }
   }
 }

@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KendoTableComponent } from './kendo-table/kendo-table.component';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { InputsModule } from '@progress/kendo-angular-inputs';
 
 @NgModule({
   declarations: [AppComponent, KendoTableComponent],
@@ -18,6 +19,8 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
     AppRoutingModule,
     GridModule,
     BrowserAnimationsModule,
+    ButtonsModule,
+    InputsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

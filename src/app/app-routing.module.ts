@@ -7,12 +7,12 @@ const routes: Routes = [
     path: 'table',
     component: KendoTableComponent,
   },
-  {
-    path: '',
-    redirectTo: 'table',
-    pathMatch: 'full',
-  },
-  { path: '**', redirectTo: 'table' },
+  // {
+  //   path: '',
+  //   redirectTo: 'table',
+  //   pathMatch: 'full',
+  // },
+  // { path: '**', redirectTo: 'table' },
 ];
 
 @NgModule({
