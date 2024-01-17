@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
   items: Array<DrawerItem> = [
     { text: 'Table', selected: true },
     { text: 'Grid' },
+    { text: 'other Components' },
   ];
   constructor(private router: Router) {}
   ngOnInit(): void {

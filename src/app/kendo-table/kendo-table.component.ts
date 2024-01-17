@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { sampleProducts } from 'src/assets/tableData';
+import { TablesampleProducts } from 'src/assets/tableData';
 
 interface ColumnSetting {
   field: string;
@@ -26,5 +26,5 @@ interface Product {
   styleUrls: ['./kendo-table.component.scss'],
 })
 export class KendoTableComponent {
-  gridData: Product[] = sampleProducts;
+  gridData: Product[] = TablesampleProducts;
 }

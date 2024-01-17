@@ -1,3 +1,25 @@
-<p>kendo-grid works!</p>
-sd;vlslbsk
-sv;lsdv;d
+<div>
+  <h1>Grid Data</h1>
+  <kendo-grid [kendoGridBinding]="gridData" filterable="menu" [height]="560">
+    <kendo-grid-column
+      field="ProductID"
+      title="ID"
+      [width]="40"
+      [filterable]="false"
+    >
+    </kendo-grid-column>
+    <kendo-grid-column
+      field="ProductName"
+      title="Product Name"
+    ></kendo-grid-column>
+    <kendo-grid-column field="UnitPrice" title="Price" filter="numeric">
+    </kendo-grid-column>
+    <kendo-grid-column
+      field="FirstOrderedOn"
+      title="Date"
+      format="MM/dd/yyyy"
+      filter="date"
+    >
+    </kendo-grid-column>
+  </kendo-grid>
+</div>
