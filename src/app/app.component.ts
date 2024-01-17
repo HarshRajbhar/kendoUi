@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
     { text: 'Table', selected: true },
     { text: 'Grid' },
     { text: 'other Components' },
+    { text: 'Buttons' },
   ];
   constructor(private router: Router) {}
   ngOnInit(): void {

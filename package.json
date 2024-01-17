@@ -37,6 +37,7 @@
     "@progress/kendo-angular-treeview": "^7.0.0",
     "@progress/kendo-data-query": "^1.0.0",
     "@progress/kendo-drawing": "^1.0.0",
+    "@progress/kendo-font-icons": "^2.1.0",
     "@progress/kendo-licensing": "^1.0.2",
     "@progress/kendo-svg-icons": "^2.1.0",
     "@progress/kendo-theme-default": "^5.0.0",

@@ -1,0 +1,35 @@
+<div>
+  <h1 class="text-center !text-[20px] my-4 w-full">Kendo All Type of Inputs</h1>
+  <hr />
+</div>
+
+<section class="section">
+  <!-- Checkbox -->
+  <div class="input-box mb">
+    <p class="mb">Primary Button</p>
+    <kendo-dropdownbutton [data]="dropdown_data" themeColor="primary">
+      User Settings
+    </kendo-dropdownbutton>
+  </div>
+  <!-- Floating Btn -->
+  <div class="input-box ">
+    <p class="mb">2) Floating btn</p>
+    <div class="k-card k-card-vertical">
+      <img [src]="imageSrc" class="k-card-media" />
+      <div class="k-card-body">
+        <kendo-floatingactionbutton
+          text="Add to Queue"
+          title="Add to Queue"
+          [offset]="{ x: '15%', y: '25%' }"
+          [align]="{ horizontal: 'center', vertical: 'bottom' }"
+          positionMode="absolute"
+          (click)="addToQueue()"
+        >
+        </kendo-floatingactionbutton>
+
+        <h2 class="k-card-title">Summer Mix 2020</h2>
+        <p class="k-card-subtitle">DJ Peril</p>
+      </div>
+    </div>
+  </div>
+</section>
