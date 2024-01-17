@@ -18,8 +18,15 @@
 
     <kendo-drawer-content>
       <!-- <router-outlet></router-outlet> -->
-      <app-kendo-table *ngIf="selected === 'Table'"></app-kendo-table>
-      <app-kendo-grid *ngIf="selected === 'Grid'"></app-kendo-grid>
+      <!-- <div
+        style="width: 100%; height: 90vh; overflow: auto; padding-bottom: 1rem"
+      > -->
+        <app-kendo-table *ngIf="selected === 'Table'"></app-kendo-table>
+        <app-kendo-grid *ngIf="selected === 'Grid'"></app-kendo-grid>
+        <app-kendo-inputs
+          *ngIf="selected === 'other Components'"
+        ></app-kendo-inputs>
+      <!-- </div> -->
     </kendo-drawer-content>
   </kendo-drawer-container>
 </section>

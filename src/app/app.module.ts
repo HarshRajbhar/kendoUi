@@ -1,27 +1,40 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { LabelModule } from '@progress/kendo-angular-label';
+import { LayoutModule } from '@progress/kendo-angular-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GridModule } from '@progress/kendo-angular-grid';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { KendoTableComponent } from './kendo-table/kendo-table.component';
-import { LayoutModule } from '@progress/kendo-angular-layout';
-import { ButtonsModule } from '@progress/kendo-angular-buttons';
-import { InputsModule } from '@progress/kendo-angular-inputs';
 import { KendoGridComponent } from './kendo-grid/kendo-grid.component';
+import { KendoInputsComponent } from './kendo-inputs/kendo-inputs.component';
+import { KendoTableComponent } from './kendo-table/kendo-table.component';
 
 @NgModule({
-  declarations: [AppComponent, KendoTableComponent, KendoGridComponent],
+  declarations: [
+    AppComponent,
+    KendoTableComponent,
+    KendoGridComponent,
+    KendoInputsComponent,
+  ],
   imports: [
     LayoutModule,
-    ButtonsModule,  
+    ButtonsModule,
     BrowserModule,
     AppRoutingModule,
     GridModule,
     BrowserAnimationsModule,
-    ButtonsModule,
-    InputsModule
+    InputsModule,
+    LabelModule,
+    ReactiveFormsModule,
+    DropDownsModule,
+    LabelModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SVGIcon, cartIcon } from '@progress/kendo-svg-icons';
 import { GridsampleProducts } from 'src/assets/tableData';
 
 interface Product {

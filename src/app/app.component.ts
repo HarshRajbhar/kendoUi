@@ -31,11 +31,5 @@ export class AppComponent implements OnInit {
   }
   onSelect(ev: DrawerSelectEvent): void {
     this.selected = ev.item.text;
-    // if (this.selected === 'Table') {
-    //   this.router.navigate(['/grid']);
-    // }
-    // if (ev.item.text === 'Grid') {
-    //   this.router.navigate(['/grid']);
-    // }
   }
 }
