@@ -150,11 +150,16 @@ export class KendoGrid2Component {
   saveHandler(args: SaveEvent): void {
     this.mainGridData.forEach((e) => {
       const ind = e.SubGridData.findIndex((e2) => {
+        console.log(e2);
+
         return args.dataItem.SubID === e2.SubID;
       });
-      console.log(e.SubGridData[ind]);
-      e.SubGridData[ind].SubName = args.formGroup.value.SubName;
-      this.closeEditor(args.sender, args.rowIndex);
+      // console.log(e.SubGridData[ind].SubName);
+      console.log(ind);
+      if (ind != -1) {
+        e.SubGridData[ind].SubName = args.formGroup.value.SubName as string;
+        this.closeEditor(args.sender, args.rowIndex);
+      }
     });
   }
 
