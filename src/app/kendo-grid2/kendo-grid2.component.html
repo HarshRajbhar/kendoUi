@@ -5,6 +5,7 @@
       [kendoGridBinding]="mainGridData"
       [pageable]="true"
       [pageSize]="2"
+      [sortable]="true"
       [selectable]="true"
       style="height: 450px"
     >
@@ -21,6 +22,7 @@
           [pageable]="true"
           [pageSize]="3"
           [height]="200"
+          [sortable]="true"
           (edit)="editHandler($event)"
           (cancel)="cancelHandler($event)"
           (save)="saveHandler($event)"
