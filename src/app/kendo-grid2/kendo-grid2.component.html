@@ -1,0 +1,48 @@
+<section>
+  <div *ngIf="true">
+    <h1 class="text-center my-4 w-full">Sub Grid Data</h1>
+    <kendo-grid
+      [kendoGridBinding]="mainGridData"
+      [pageable]="true"
+      [pageSize]="2"
+      [selectable]="true"
+      style="height: 450px"
+    >
+      <kendo-grid-column field="ID" title="ID"></kendo-grid-column>
+      <kendo-grid-column field="Name" title="Name"></kendo-grid-column>
+      <kendo-grid-column
+        field="Description"
+        title="Description"
+      ></kendo-grid-column>
+      <!-- <kendo-grid-column field="SubGridData" title="SubGrid"> -->
+      <ng-template kendoGridDetailTemplate let-dataItem>
+        <kendo-grid
+          [kendoGridBinding]="dataItem.SubGridData"
+          [pageable]="true"
+          [pageSize]="3"
+          [height]="200"
+          (edit)="editHandler($event)"
+          (cancel)="cancelHandler($event)"
+          (save)="saveHandler($event)"
+        >
+          <kendo-grid-column
+            field="SubID"
+            title="SubID"
+            editor="text"
+          ></kendo-grid-column>
+          <kendo-grid-column
+            field="SubName"
+            title="SubName"
+          ></kendo-grid-column>
+          <kendo-grid-command-column title="command" [width]="250">
+            <ng-template kendoGridCellTemplate>
+              <button kendoGridEditCommand [primary]="true">Edit</button>
+              <button kendoGridSaveCommand>Update</button>
+              <button kendoGridCancelCommand>Cancel</button>
+            </ng-template>
+          </kendo-grid-command-column>
+        </kendo-grid>
+      </ng-template>
+    </kendo-grid>
+  </div>
+</section>

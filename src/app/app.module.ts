@@ -15,6 +15,7 @@ import { KendoGridComponent } from './kendo-grid/kendo-grid.component';
 import { KendoInputsComponent } from './kendo-inputs/kendo-inputs.component';
 import { KendoTableComponent } from './kendo-table/kendo-table.component';
 import { KendoBtnComponent } from './kendo-btn/kendo-btn.component';
+import { KendoGrid2Component } from './kendo-grid2/kendo-grid2.component';
 // import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { KendoBtnComponent } from './kendo-btn/kendo-btn.component';
     KendoGridComponent,
     KendoInputsComponent,
     KendoBtnComponent,
+    KendoGrid2Component,
   ],
   imports: [
     LayoutModule,
