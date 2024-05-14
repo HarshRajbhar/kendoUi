@@ -1,6 +1,12 @@
 <div>
   <h1 class="text-center my-4 w-full">Grid Data</h1>
-  <kendo-grid [kendoGridBinding]="gridData" filterable="menu" [height]="560">
+  <kendo-grid [kendoGridBinding]="gridData" filterable="menu" [height]="300"
+  [pageable]="true"
+  [pageSize]="5"
+  [sortable]="true"
+  >
+  
+  >
     <kendo-grid-column
       field="ProductID"
       title="ID"
@@ -21,5 +27,6 @@
       filter="date"
     >
     </kendo-grid-column>
+    
   </kendo-grid>
 </div>
